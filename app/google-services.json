@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "552598398331",
+    "firebase_url": "https://thinh1-994d1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "thinh1-994d1",
+    "storage_bucket": "thinh1-994d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552598398331:android:c837813687a3c2a8af49de",
+        "android_client_info": {
+          "package_name": "com.example.hotelstars1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552598398331-hejsbl829cqpoteqe8e4jjjn4jiusiee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYKkreGBbdr6eLirxSvhIPeErfYFDMimI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552598398331-hejsbl829cqpoteqe8e4jjjn4jiusiee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
