@@ -40,7 +40,7 @@ public class CurrentBooking extends AppCompatActivity implements BookingViewFetc
 
         menu = findViewById(R.id.onMenu);
         profile= findViewById(R.id.onProfile);
-        title.setText("Current Booking List");
+        title.setText("Phòng đang đặt");
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

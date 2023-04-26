@@ -107,7 +107,7 @@ public class ManageRoomsAdapter extends RecyclerView.Adapter<ManageRoomsAdapter.
                         @Override
                         public void onSuccess(Void aVoid) {
 
-                            Toast.makeText(view.getContext(), "Room Updated", Toast.LENGTH_LONG).show();
+                            Toast.makeText(view.getContext(), "Đã cập nhật", Toast.LENGTH_LONG).show();
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
@@ -118,18 +118,18 @@ public class ManageRoomsAdapter extends RecyclerView.Adapter<ManageRoomsAdapter.
                     });
                 }else{
                     if(TextUtils.isEmpty(title)){
-                        holder.edTitle.setError("Title is required");
+                        holder.edTitle.setError("Tiêu đề không được bỏ trống");
                         return;
                     }if (TextUtils.isEmpty(description)){
-                        holder.edDesc.setError("Description is required");
+                        holder.edDesc.setError("Mô tả không được bỏ trống");
                         return;
                     }
                     if (TextUtils.isEmpty(location)){
-                        holder.edLocation.setError("Location is required");
+                        holder.edLocation.setError("Vị trí không được bỏ trống");
                         return;
                     }
                     if (holder.edPrice.getText() == null){
-                        holder.edPrice.setError("Price is required");
+                        holder.edPrice.setError("Giá tiền không được bỏ trống");
                     }
                 }
 

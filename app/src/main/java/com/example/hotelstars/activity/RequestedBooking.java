@@ -40,7 +40,7 @@ public class RequestedBooking extends AppCompatActivity implements BookingViewFe
 
         menu = findViewById(R.id.onMenu);
         profile= findViewById(R.id.onProfile);
-        title.setText("Requested Booking List");
+        title.setText("Phòng chờ duyệt");
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

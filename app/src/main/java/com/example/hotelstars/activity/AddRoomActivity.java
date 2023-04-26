@@ -91,7 +91,7 @@ public class AddRoomActivity extends AppCompatActivity implements RoomViewMessag
         if(imageUri != null){
             Log.d(TAG, "uploadfile: getLastPathSegment type " + imageUri.getLastPathSegment());
             final ProgressDialog pd = new ProgressDialog(this);
-            pd.setTitle("Uploading the image...");
+            pd.setTitle("Đang tải ảnh...");
             pd.show();
             StorageReference fileReference = storageReference.child(imageUri.getLastPathSegment());
             uploadtask = fileReference.putFile(imageUri)
@@ -105,7 +105,7 @@ public class AddRoomActivity extends AppCompatActivity implements RoomViewMessag
                                     pd.dismiss();
                                     sImageUri = uri.toString();
                                     Log.d(TAG, "uploadFile: url will be upload " + sImageUri);
-                                    Toast.makeText(AddRoomActivity.this, "Image Upload successful", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(AddRoomActivity.this, "Thành công", Toast.LENGTH_SHORT).show();
                                     checkSignUpDetails(sImageUri);
                                 }
                             });
@@ -120,13 +120,13 @@ public class AddRoomActivity extends AppCompatActivity implements RoomViewMessag
                         @Override
                         public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
                             double progress = (100.0* snapshot.getBytesTransferred()/snapshot.getTotalByteCount());
-                            pd.setMessage("Progress: "+ (int) progress + "%");
+                            pd.setMessage("Trạng thái: "+ (int) progress + "%");
                         }
                     });
 
 
         }else{
-            Toast.makeText(this, "No Image selected", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Hãy chọn ảnh", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -147,22 +147,22 @@ public class AddRoomActivity extends AppCompatActivity implements RoomViewMessag
 
         }else{
             if(TextUtils.isEmpty(title)){
-                edTitle.setError("Title is required");
+                edTitle.setError("Tiêu đề không được bỏ trống.");
                 return;
             }if (TextUtils.isEmpty(Description)){
-                edDesc.setError("Description is required");
+                edDesc.setError("Mô tả không được bỏ trống.");
                 return;
             }
             if (TextUtils.isEmpty(location)){
-                edLocation.setError("Location is required");
+                edLocation.setError("Vị trí không được bỏ trống.");
                 return;
             }
             if (edPrice.getText() == null){
-                edPrice.setError("Price is required");
+                edPrice.setError("Giá thánh không được bỏ trống.");
                 return;
             }
             if (TextUtils.isEmpty(imageuri)){
-                Toast.makeText(AddRoomActivity.this, "Image is Required", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddRoomActivity.this, "Phải chọn ảnh", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -188,7 +188,7 @@ public class AddRoomActivity extends AppCompatActivity implements RoomViewMessag
 
     public void onAddClick(View view) {
         if(uploadtask != null && uploadtask.isInProgress()){
-            Toast.makeText(AddRoomActivity.this, "Upload in progress", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddRoomActivity.this, "Đang up ảnh lên", Toast.LENGTH_SHORT).show();
         }
         else{
             uploadFile();

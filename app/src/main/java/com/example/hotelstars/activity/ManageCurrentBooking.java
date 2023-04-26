@@ -40,7 +40,7 @@ public class ManageCurrentBooking extends AppCompatActivity implements BookingVi
         title = findViewById(R.id.pageTitle);
 
         menu = findViewById(R.id.onMenu);
-        title.setText("Current Booking List");
+        title.setText("Phòng đang đặt");
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

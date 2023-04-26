@@ -40,7 +40,7 @@ public class ApproveBooking extends AppCompatActivity implements BookingViewFetc
         title = findViewById(R.id.pageTitle);
 
         menu = findViewById(R.id.onMenu);
-        title.setText("Requested Booking List");
+        title.setText("Phòng chờ duyệt");
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

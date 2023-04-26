@@ -62,10 +62,10 @@ public class ManageCurrentBookingAdapter extends RecyclerView.Adapter<ManageCurr
         holder.edMail.setText(CustomerEmail);
         holder.edTitle.setText(roomTitle);
         holder.edStatus.setText("Status: "+status);
-        holder.edStartDate.setText(new StringBuilder().append("Start Date: ").append(startDate).toString());
-        holder.edNights.setText(new StringBuilder().append("Nights: ").append(String.valueOf(bookingDays)).toString());
-        holder.edPrice.setText(new StringBuilder().append("Price: ").append(String.valueOf(price)).append(" RM").toString());
-        holder.edTotal.setText(new StringBuilder().append("Total: ").append(String.valueOf(totalPayment)).append(" RM").toString());
+        holder.edStartDate.setText(new StringBuilder().append("Ngày bắt đầu: ").append(startDate).toString());
+        holder.edNights.setText(new StringBuilder().append("Số đêm: ").append(String.valueOf(bookingDays)).toString());
+        holder.edPrice.setText(new StringBuilder().append("Giá tiền: ").append(String.valueOf(price)).append(" VND").toString());
+        holder.edTotal.setText(new StringBuilder().append("Tổng tiền: ").append(String.valueOf(totalPayment)).append(" VND").toString());
         //set the image
         Picasso.with(this.context).load(imageUrl).fit().into(holder.imageView);
 
@@ -78,7 +78,7 @@ public class ManageCurrentBookingAdapter extends RecyclerView.Adapter<ManageCurr
                 record.update("status", "checkedOut", "endDate", endDate).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(view.getContext(), "Booking Checked out", Toast.LENGTH_LONG).show();
+                        Toast.makeText(view.getContext(), "Check out thành công", Toast.LENGTH_LONG).show();
                         //delete from the ui
                         arrayList.remove(holder.getAdapterPosition());
                         notifyItemRemoved(holder.getAdapterPosition());

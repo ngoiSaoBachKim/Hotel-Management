@@ -41,7 +41,7 @@ public class BookingHistory extends AppCompatActivity implements BookingViewFetc
 
         menu = findViewById(R.id.onMenu);
         profile= findViewById(R.id.onProfile);
-        title.setText("Booking History List");
+        title.setText("Phòng đã đặt");
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

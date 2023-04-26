@@ -36,7 +36,7 @@ public class AdminManageRoom extends Activity implements RoomViewFetchMessage {
 
         ListDataView = findViewById(R.id.ListViewRoom);
         title = findViewById(R.id.pageTitle);
-        title.setText("Manage Room Record");
+        title.setText("Quản lý phòng");
         roomFetchData = new RoomFetchData(this,this);
         RecyclerViewMethods();
         roomFetchData.onSuccessUpdate(this);

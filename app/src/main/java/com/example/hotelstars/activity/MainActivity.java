@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
             Intent intent;
-            if(email.equals("admin@gmail.com")){
+            if(email.equals("hqthinh2001@gmail.com")){
                 Toast.makeText(MainActivity.this, "Welcome Back", Toast.LENGTH_LONG).show();
                 intent = new Intent(MainActivity.this, AdminPanel.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

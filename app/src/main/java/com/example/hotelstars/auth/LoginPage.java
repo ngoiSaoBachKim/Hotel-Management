@@ -52,11 +52,11 @@ public class LoginPage extends AppCompatActivity {
             SignInWithEmailAndPassword(uEmail, uPassword);
         } else {
             if (TextUtils.isEmpty(uEmail)) {
-                email.setError("Email is required");
+                email.setError("Email không được bỏ trống");
                 return;
             }
             if (TextUtils.isEmpty(uPassword)) {
-                password.setError("Password is required");
+                password.setError("Mật khẩu không được bỏ trống");
             }
 
         }
@@ -85,7 +85,7 @@ public class LoginPage extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }else{
-                                Toast.makeText(LoginPage.this, "Please verify your email first", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginPage.this, "Hãy xác nhận email của khẩu", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginPage.this, VerifyEmail.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);

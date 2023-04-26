@@ -107,13 +107,14 @@
                         android:background="@drawable/wifi"
                         android:layout_marginBottom="40dp"
                         android:backgroundTint="@color/blue"/>
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="70"
-                        android:padding="10dp"
                         android:background="@color/blue"
-                        android:text="Please use the following details to access the WiFi network \nUsername: Room No\nPassword: HotelStar@5"
+                        android:padding="10dp"
+                        android:text="Xin vui lòng sử dụng thông tin dưới đây để truy cập WiFi khách sạn \nUsername: Floor {số tầng}\nPassword: HotelStar@5"
                         android:textAlignment="textStart"
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -152,13 +153,14 @@
                         android:background="@drawable/call"
                         android:layout_marginBottom="40dp"
                         android:backgroundTint="@color/blue"/>
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="70"
-                        android:padding="10dp"
                         android:background="@color/blue"
-                        android:text="Please use the following details to call the customer service at any time you wish\nPhone No: 0123456456 or 0323123"
+                        android:padding="10dp"
+                        android:text="Xin vui lòng gọi vào số điện thoại chăm sóc khách hàng\nPhone No: 0123456456 hoặc 0987654321"
                         android:textAlignment="textStart"
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -196,13 +198,14 @@
                         android:background="@drawable/food"
                         android:layout_marginBottom="40dp"
                         android:backgroundTint="@color/blue"/>
+
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="70"
-                        android:padding="10dp"
                         android:background="@color/blue"
-                        android:text="Please note that the food timing as follow:\nBreakfast: 8 am\nLunch: 12:30pm\nDinner: 7pm"
+                        android:padding="10dp"
+                        android:text="Thời gian phục vụ các bữa ăn sẽ như sau:\nSáng: 8 am\nTrưa: 12:30pm\nTối: 7pm"
                         android:textAlignment="textStart"
                         android:textColor="@color/white"
                         android:textSize="16sp"

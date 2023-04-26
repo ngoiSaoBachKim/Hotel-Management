@@ -92,11 +92,11 @@ public class UserProfile extends AppCompatActivity {
 
         }else{
             if(TextUtils.isEmpty(Name)){
-                edName.setError("Name is required");
+                edName.setError("Tên không được bỏ trống.");
                 return;
             }
             if(TextUtils.isEmpty(Password)){
-                edPassword.setError("Password is required and must be more than 6c");
+                edPassword.setError("Password không được để trống hoặc ít hơn 6 chữ cái.");
             }
 
         }
@@ -115,7 +115,7 @@ public class UserProfile extends AppCompatActivity {
                     .addOnSuccessListener(new OnSuccessListener< Void >() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(UserProfile.this, "Profile updated !", Toast.LENGTH_LONG).show();
+                            Toast.makeText(UserProfile.this, "Cập nhật thành công !", Toast.LENGTH_LONG).show();
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                 @Override

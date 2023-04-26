@@ -60,10 +60,10 @@ public class ApproveBookingAdapter  extends RecyclerView.Adapter<ApproveBookingA
         holder.edMail.setText(CustomerEmail);
         holder.edTitle.setText(roomTitle);
         holder.edStatus.setText("Status: "+status);
-        holder.edStartDate.setText(new StringBuilder().append("Start Date: ").append(startDate).toString());
-        holder.edNights.setText(new StringBuilder().append("Nights: ").append(String.valueOf(bookingDays)).toString());
-        holder.edPrice.setText(new StringBuilder().append("Price: ").append(String.valueOf(price)).append(" RM").toString());
-        holder.edTotal.setText(new StringBuilder().append("Total: ").append(String.valueOf(totalPayment)).append(" RM").toString());
+        holder.edStartDate.setText(new StringBuilder().append("Ngày bắt đầu: ").append(startDate).toString());
+        holder.edNights.setText(new StringBuilder().append("Số đêm: ").append(String.valueOf(bookingDays)).toString());
+        holder.edPrice.setText(new StringBuilder().append("Giá thành: ").append(String.valueOf(price)).append(" VND").toString());
+        holder.edTotal.setText(new StringBuilder().append("Tổng tiền: ").append(String.valueOf(totalPayment)).append(" VND").toString());
         //set the image
         Picasso.with(this.context).load(imageUrl).fit().into(holder.imageView);
         //cancel booking
@@ -76,7 +76,7 @@ public class ApproveBookingAdapter  extends RecyclerView.Adapter<ApproveBookingA
                     @Override
                     public void onSuccess(Void aVoid) {
 
-                        Toast.makeText(view.getContext(), "Booking Canceled", Toast.LENGTH_LONG).show();
+                        Toast.makeText(view.getContext(), "Đã huỷ", Toast.LENGTH_LONG).show();
                         //delete from the ui
                         arrayList.remove(holder.getAdapterPosition());
                         notifyItemRemoved(holder.getAdapterPosition());
@@ -99,7 +99,7 @@ public class ApproveBookingAdapter  extends RecyclerView.Adapter<ApproveBookingA
                 record.update("status", "accepted").addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(view.getContext(), "Booking Approved", Toast.LENGTH_LONG).show();
+                        Toast.makeText(view.getContext(), "Xác Nhận", Toast.LENGTH_LONG).show();
                         //delete from the ui
                         arrayList.remove(holder.getAdapterPosition());
                         notifyItemRemoved(holder.getAdapterPosition());
