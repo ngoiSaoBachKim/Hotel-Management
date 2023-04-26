@@ -85,7 +85,7 @@ public class LoginPage extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }else{
-                                Toast.makeText(LoginPage.this, "Hãy xác nhận email của khẩu", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginPage.this, "Hãy xác nhận email của bạn", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(LoginPage.this, VerifyEmail.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
